@@ -1,6 +1,7 @@
 #ifndef __BTREE_H__
 #define __BTREE_H__
 
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 

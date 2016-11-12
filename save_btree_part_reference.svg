@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="2455" height="130">
+	<rect x="1227" y="30" width="455" height="20" stroke="black" stroke-width="2" fill="none"/>
+	<line x1="1337" y1="30" x2="1337" y2="50" stroke="black" stroke-width="2" />
+	<line x1="1342" y1="30" x2="1342" y2="50" stroke="black" stroke-width="2" />
+	<line x1="1452" y1="30" x2="1452" y2="50" stroke="black" stroke-width="2" />
+	<line x1="1457" y1="30" x2="1457" y2="50" stroke="black" stroke-width="2" />
+	<line x1="1567" y1="30" x2="1567" y2="50" stroke="black" stroke-width="2" />
+	<line x1="1572" y1="30" x2="1572" y2="50" stroke="black" stroke-width="2" />
+	<g font-size="14" font-family="sans-serif" fill="black" stroke="none" text-anchor="middle">
+		<text x="1282" y="45">0</text>
+		<text x="1397" y="45">1</text>
+		<text x="1512" y="45">2000000000</text>
+	</g>
+	<rect x="30" y="80" width="455" height="20" stroke="black" stroke-width="2" fill="none"/>
+	<line x1="140" y1="80" x2="140" y2="100" stroke="black" stroke-width="2" />
+	<line x1="145" y1="80" x2="145" y2="100" stroke="black" stroke-width="2" />
+	<line x1="255" y1="80" x2="255" y2="100" stroke="black" stroke-width="2" />
+	<line x1="260" y1="80" x2="260" y2="100" stroke="black" stroke-width="2" />
+	<line x1="370" y1="80" x2="370" y2="100" stroke="black" stroke-width="2" />
+	<line x1="375" y1="80" x2="375" y2="100" stroke="black" stroke-width="2" />
+	<g font-size="14" font-family="sans-serif" fill="black" stroke="none" text-anchor="middle">
+		<text x="85" y="95">1</text>
+		<text x="200" y="95">1000000</text>
+		<text x="315" y="95">2</text>
+		<text x="430" y="95">3</text>
+	</g>
+	<line x1="30" y1="80" x2="1227" y2="50" stroke="black" stroke-width="2" />
+	<rect x="509" y="80" width="455" height="20" stroke="black" stroke-width="2" fill="none"/>
+	<line x1="619" y1="80" x2="619" y2="100" stroke="black" stroke-width="2" />
+	<line x1="624" y1="80" x2="624" y2="100" stroke="black" stroke-width="2" />
+	<line x1="734" y1="80" x2="734" y2="100" stroke="black" stroke-width="2" />
+	<line x1="739" y1="80" x2="739" y2="100" stroke="black" stroke-width="2" />
+	<line x1="849" y1="80" x2="849" y2="100" stroke="black" stroke-width="2" />
+	<line x1="854" y1="80" x2="854" y2="100" stroke="black" stroke-width="2" />
+	<g font-size="14" font-family="sans-serif" fill="black" stroke="none" text-anchor="middle">
+		<text x="564" y="95">2</text>
+		<text x="679" y="95">1000000</text>
+		<text x="794" y="95">2</text>
+		<text x="909" y="95">3</text>
+	</g>
+	<line x1="509" y1="80" x2="1342" y2="50" stroke="black" stroke-width="2" />
+	<rect x="988" y="80" width="455" height="20" stroke="black" stroke-width="2" fill="none"/>
+	<line x1="1098" y1="80" x2="1098" y2="100" stroke="black" stroke-width="2" />
+	<line x1="1103" y1="80" x2="1103" y2="100" stroke="black" stroke-width="2" />
+	<line x1="1213" y1="80" x2="1213" y2="100" stroke="black" stroke-width="2" />
+	<line x1="1218" y1="80" x2="1218" y2="100" stroke="black" stroke-width="2" />
+	<line x1="1328" y1="80" x2="1328" y2="100" stroke="black" stroke-width="2" />
+	<line x1="1333" y1="80" x2="1333" y2="100" stroke="black" stroke-width="2" />
+	<g font-size="14" font-family="sans-serif" fill="black" stroke="none" text-anchor="middle">
+		<text x="1043" y="95">3</text>
+		<text x="1158" y="95">1000000</text>
+		<text x="1273" y="95">2</text>
+		<text x="1388" y="95">3</text>
+	</g>
+	<line x1="988" y1="80" x2="1457" y2="50" stroke="black" stroke-width="2" />
+	<rect x="1467" y="80" width="455" height="20" stroke="black" stroke-width="2" fill="none"/>
+	<line x1="1577" y1="80" x2="1577" y2="100" stroke="black" stroke-width="2" />
+	<line x1="1582" y1="80" x2="1582" y2="100" stroke="black" stroke-width="2" />
+	<line x1="1692" y1="80" x2="1692" y2="100" stroke="black" stroke-width="2" />
+	<line x1="1697" y1="80" x2="1697" y2="100" stroke="black" stroke-width="2" />
+	<line x1="1807" y1="80" x2="1807" y2="100" stroke="black" stroke-width="2" />
+	<line x1="1812" y1="80" x2="1812" y2="100" stroke="black" stroke-width="2" />
+	<g font-size="14" font-family="sans-serif" fill="black" stroke="none" text-anchor="middle">
+		<text x="1522" y="95">4</text>
+		<text x="1637" y="95">1000000</text>
+	</g>
+	<line x1="1467" y1="80" x2="1572" y2="50" stroke="black" stroke-width="2" />
+	<rect x="1946" y="80" width="455" height="20" stroke="black" stroke-width="2" fill="none"/>
+	<line x1="2056" y1="80" x2="2056" y2="100" stroke="black" stroke-width="2" />
+	<line x1="2061" y1="80" x2="2061" y2="100" stroke="black" stroke-width="2" />
+	<line x1="2171" y1="80" x2="2171" y2="100" stroke="black" stroke-width="2" />
+	<line x1="2176" y1="80" x2="2176" y2="100" stroke="black" stroke-width="2" />
+	<line x1="2286" y1="80" x2="2286" y2="100" stroke="black" stroke-width="2" />
+	<line x1="2291" y1="80" x2="2291" y2="100" stroke="black" stroke-width="2" />
+	<g font-size="14" font-family="sans-serif" fill="black" stroke="none" text-anchor="middle">
+		<text x="2001" y="95">5</text>
+		<text x="2116" y="95">1000000</text>
+	</g>
+	<line x1="1946" y1="80" x2="1682" y2="50" stroke="black" stroke-width="2" />
+</svg>
