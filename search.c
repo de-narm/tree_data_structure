@@ -10,7 +10,6 @@
 
 short findElement(struct node* node, stdelement e){
 	short i, result = -1;
-	printf("\nSuche: %d", e);
 	node_pointer newNode;
 	do{
 		newNode = NULL;
