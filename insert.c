@@ -61,8 +61,17 @@ void insert_into_node(struct node* node, stdelement e){
 			insert(middle);
 			root->children[0] = node;
 			root->children[1] = newNode;
+			node->parent = root;
+			newNode->parent = root;
 		}else{
-
+			insert_into_node(node->parent, middle);
+			newNode->parent = node->parent;
+			for(i = 0; i < node->parent->number_of_elements; i++){
+				if(node->parent->elements[i] == middle){
+					node->parent->children[i+1] = newNode;
+					break;
+				}
+			}
 		}
 	} else{
 		//case: new element is first or between other elements
