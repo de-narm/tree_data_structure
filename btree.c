@@ -12,7 +12,8 @@
 #define NODE_WIDTH (FIELD_WIDTH + FIELD_AND_SPACER_WIDTH * (MAXNODE - 1))
 #define HALF_NODE_WIDTH (NODE_WIDTH / 2)
 
-const char* SVG_HEADER_STR = "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" width=\"%d\" height=\"%d\">\n";
+const char* SVG_HEADER_STR = "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" width=\"%d\" height=\"%d\">\n"
+  "\t<rect x=\"0\" y=\"0\" width=\"%d\" height=\"%d\" fill=\"white\"/>\n";
 const char* SVG_LINE_STR = "\t<line x1=\"%d\" y1=\"%d\" x2=\"%d\" y2=\"%d\" stroke=\"black\" stroke-width=\"2\" />\n";
 const char* SVG_RECT_STR = "\t<rect x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\" stroke=\"black\" stroke-width=\"2\" fill=\"none\"/>\n";
 const char* SVG_TEXT_BEGIN_STR = "\t<g font-size=\"14\" font-family=\"sans-serif\" fill=\"black\" stroke=\"none\" text-anchor=\"middle\">\n";
@@ -51,7 +52,7 @@ static int svg_save_header(FILE* fd, node_pointer tree) {
   int depth = get_btree_depth(tree);
   int width = svg_get_width(depth);
   int height = svg_get_height(depth);
-  ret = fprintf(fd, SVG_HEADER_STR, width, height);
+  ret = fprintf(fd, SVG_HEADER_STR, width, height, width, height);
   if(ret > 0)
     ret = EXIT_SUCCESS;
   return ret;
@@ -156,10 +157,10 @@ static int render_node_to_svg(FILE* fd, node_pointer node, int x, int y) {
 
 static int save_btree_part(FILE* fd, node_pointer tree, int x, int y, int prev_stride) {
   int ret;
+  int i;
   int cur_x = x;
   int stride = prev_stride / (MAXNODE + 1);
-  int i;
-  int new_x = (x + HALF_NODE_WIDTH) - prev_stride / 2 - HALF_NODE_WIDTH;
+  int new_x = (x + HALF_NODE_WIDTH) - prev_stride / 2 + stride / 2 - HALF_NODE_WIDTH;
   int new_y = y + NODE_HEIGHT_AND_VERT_SPACING;
   if(fd == NULL)
     return EXIT_FAILURE;
@@ -205,7 +206,7 @@ int save_btree(const char* path, node_pointer tree) {
     return ret;
   width = svg_get_width(get_btree_depth(tree));
   x = width / 2 - HALF_NODE_WIDTH;
-  prev_stride = width - 2 * NODE_HOR_SPACING;
+  prev_stride = width - NODE_HOR_SPACING;
   ret = save_btree_part(fd, tree, x, NODE_HOR_SPACING, prev_stride);
   if(ret != EXIT_SUCCESS) {
     fclose(fd);

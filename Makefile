@@ -7,7 +7,7 @@ FILES=main.c
 
 all: $(TARGET)
 $(TARGET):	$(FILES)
-	$(CC) -o $(TARGET) $(FILES) $(CFLAGS) $(LIBS)
+	$(CC) -o $(TARGET) $(FILES) $(CFLAGS) $(LIBS) -g
 test:
 	make all
 	./_test
