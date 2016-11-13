@@ -8,6 +8,13 @@
 #ifndef SEARCH_H_
 #define SEARCH_H_
 
-short findElement(struct node* node, stdelement e);
+#include"btree.h"
+
+struct node_element{
+	node_pointer node;
+	short index;
+};
+
+struct node_element* findElement(stdelement e);
 
 #endif /* SEARCH_H_ */
