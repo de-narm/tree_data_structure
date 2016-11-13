@@ -8,8 +8,10 @@
 #ifndef INSERT_H_
 #define INSERT_H_
 
-static void insert_into_node(struct node* node, stdelement e);
-short getIndex(struct node* node, stdelement e);
+#include "btree.h"
 
+short insert(stdelement e);
+void insert_into_node(struct node* node, stdelement e);
+short getIndex(struct node* node, stdelement e);
 
 #endif /* INSERT_H_ */
