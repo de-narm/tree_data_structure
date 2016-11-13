@@ -38,4 +38,6 @@ struct node {
 int get_btree_depth(node_pointer tree);
 int save_btree(const char* path, node_pointer tree);
 
+struct node* root;
+
 #endif //__BTREE_H__
