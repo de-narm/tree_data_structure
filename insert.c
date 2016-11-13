@@ -9,8 +9,7 @@
 #include "search.h"
 
 short insert(stdelement e){
-	struct node* node = root;
-	if(!(node == NULL)){
+	if(!(root == NULL)){
 		//look if element is already in tree
 		struct node_element* selected = findElement(e);
 		/*
@@ -39,8 +38,8 @@ void insert_into_node(struct node* node, stdelement e){
 			extra = e;
 		} else{
 			extra = node->elements[MAXNODE - 1];
-			for(i = index; i < MAXNODE - 1; i++){
-				node->elements[i + 1] = node->elements[i];
+			for(i = MAXNODE - 1; i > index; i--){
+				node->elements[i] = node->elements[i-1];
 			}
 			node->elements[index] = e;
 		}
@@ -50,7 +49,15 @@ void insert_into_node(struct node* node, stdelement e){
 
 		for(i = 0; i < ORDER - 1; i++){
 			newNode->elements[i] = node->elements[ORDER + 1 + i];
+			newNode->children[i] = node->children[ORDER + 1 + i];
+			if(newNode->children[i] != NULL){
+				newNode->children[i]->parent = newNode;
+			}
 		}
+
+		newNode->children[i] = node->children[MAXNODE];
+		if(newNode->children[i] != NULL)
+			newNode->children[i]->parent = newNode;
 		newNode->elements[ORDER - 1] = extra;
 
 		node->number_of_elements = ORDER;
@@ -64,10 +71,11 @@ void insert_into_node(struct node* node, stdelement e){
 			node->parent = root;
 			newNode->parent = root;
 		}else{
-			insert_into_node(node->parent, middle);
 			newNode->parent = node->parent;
+			insert_into_node(node->parent, middle);
 			for(i = 0; i < node->parent->number_of_elements; i++){
 				if(node->parent->elements[i] == middle){
+					node->parent->children[i] = node;
 					node->parent->children[i+1] = newNode;
 					break;
 				}
