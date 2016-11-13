@@ -6,7 +6,6 @@
  */
 
 #include "btree.h"
-#include "search.h"
 
 struct node_element* findElement(stdelement e){
 	short i;

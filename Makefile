@@ -1,17 +1,13 @@
 CC=gcc
 CFLAGS=-Wall -Wextra
 LIBS=-lm
-TARGET=_test
-FILES=main.c
+TARGET=tree
+FILES=main.c btree/insert.c btree/search.c btree/btree.c btree/svg.c
 .PHONY: clean all test
 
 all: $(TARGET)
 $(TARGET):	$(FILES)
-	$(CC) -o $(TARGET) $(FILES) $(CFLAGS) $(LIBS) -g
-test:
-	make all
-	./_test
+	$(CC) -o $(TARGET) $(FILES) $(CFLAGS) $(LIBS)
 
 clean:
 	rm -f $(TARGET)
-	rm -f *.test.svg

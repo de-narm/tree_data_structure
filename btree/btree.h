@@ -5,15 +5,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*
- * defines the minimum filled elements in one node
- */
-#define ORDER 2
-
-/*
- * defines the maximum filled elements in one node
- */
-#define MAXNODE (2 * ORDER)
+#include "btree_config.h"
+#include "svg.h"
 
 /*
  * pointer to a node struct
@@ -35,9 +28,22 @@ struct node {
   node_pointer children[MAXNODE + 1];
 };
 
-int get_btree_depth(node_pointer tree);
-int save_btree(const char* path, node_pointer tree);
+struct node_element{
+	node_pointer node;
+	short index;
+};
 
 struct node* root;
+
+int get_btree_depth(node_pointer tree);
+int render_node_to_svg(FILE* fd, node_pointer node, int x, int y);
+int save_btree_part(FILE* fd, node_pointer tree, int x, int y, int prev_stride);
+int save_btree(const char* path, node_pointer tree);
+
+short insert(stdelement e);
+void insert_into_node(struct node* node, stdelement e);
+short getIndex(struct node* node, stdelement e);
+
+struct node_element* findElement(stdelement e);
 
 #endif //__BTREE_H__
