@@ -56,8 +56,9 @@ void insert_into_node(struct node* node, stdelement e){
 		}
 
 		newNode->children[i] = node->children[MAXNODE];
-		if(newNode->children[i] != NULL)
+		if(newNode->children[i] != NULL){
 			newNode->children[i]->parent = newNode;
+		}
 		newNode->elements[ORDER - 1] = extra;
 
 		node->number_of_elements = ORDER;
@@ -73,8 +74,13 @@ void insert_into_node(struct node* node, stdelement e){
 		}else{
 			newNode->parent = node->parent;
 			insert_into_node(node->parent, middle);
+
 			for(i = 0; i < node->parent->number_of_elements; i++){
-				if(node->parent->elements[i] == middle){
+				if(node->parent->elements[i] > node->elements[0]){
+					short j;
+					for(j = MAXNODE; j > i; j--){
+						node->parent->children[j] = node->parent->children[j-1];
+					}
 					node->parent->children[i] = node;
 					node->parent->children[i+1] = newNode;
 					break;
