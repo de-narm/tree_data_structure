@@ -5,8 +5,7 @@
  *      Author: Matthias Nickel
  */
 
-#include "insert.h"
-#include "search.h"
+#include "btree.h"
 
 short insert(stdelement e){
 	if(!(root == NULL)){
