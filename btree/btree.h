@@ -44,6 +44,9 @@ short insert(stdelement e);
 void insert_into_node(struct node* node, stdelement e);
 short getIndex(struct node* node, stdelement e);
 
+void delete(struct node* node, stdelement e);
+void delete_leaf(struct node* node, stdelement e);
+
 struct node_element* findElement(stdelement e);
 
 #endif //__BTREE_H__

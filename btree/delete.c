@@ -1,6 +1,6 @@
 #include "btree.h"
 
-static void delete_leaf(struct node* node, stdelement e) {
+void delete_leaf(struct node* node, stdelement e) {
   //get index of e
   int i;
   for(i = 0; i < node->number_of_elements; i++) {
