@@ -49,12 +49,14 @@ void insert_into_node(struct node* node, stdelement e){
 		for(i = 0; i < ORDER - 1; i++){
 			newNode->elements[i] = node->elements[ORDER + 1 + i];
 			newNode->children[i] = node->children[ORDER + 1 + i];
+			node->children[ORDER + 1 + i] = NULL;
 			if(newNode->children[i] != NULL){
 				newNode->children[i]->parent = newNode;
 			}
 		}
 
 		newNode->children[i] = node->children[MAXNODE];
+		node->children[MAXNODE] = NULL;
 		if(newNode->children[i] != NULL){
 			newNode->children[i]->parent = newNode;
 		}
