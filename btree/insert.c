@@ -28,8 +28,14 @@ short insert(stdelement e){
 	return 0;
 }
 
-void insert_into_node(struct node* node, stdelement e){
-	short i, index = getIndex(node, e);
+struct node* insert_into_node(struct node* node, stdelement e){
+	//get index where element shall be added
+	short i, index;
+	for(i = 0; i < node->number_of_elements; i++){
+		if(node->elements[i] > e) break;
+	}
+	index = i;
+	struct node* newNode = NULL;
 	//case: node already has maximum number of elements
 	if(node->number_of_elements >= MAXNODE){
 		stdelement extra;
@@ -44,12 +50,15 @@ void insert_into_node(struct node* node, stdelement e){
 		}
 
 		stdelement middle = node->elements[ORDER];
-		struct node* newNode = malloc(sizeof(struct node));
+		newNode = malloc(sizeof(struct node));
+		short right = ORDER + 1;
+		short ci = (index >= ORDER) ? right : ORDER;
 
-		for(i = 0; i < ORDER - 1; i++){
-			newNode->elements[i] = node->elements[ORDER + 1 + i];
-			newNode->children[i] = node->children[ORDER + 1 + i];
-			node->children[ORDER + 1 + i] = NULL;
+		for(i = 0; i < ORDER; i++){
+			newNode->elements[i] = node->elements[right + i];
+			newNode->children[i] = node->children[ci + i];
+			node->elements[right + i] = 0;
+			node->children[ci + i] = NULL;
 			if(newNode->children[i] != NULL){
 				newNode->children[i]->parent = newNode;
 			}
@@ -73,20 +82,35 @@ void insert_into_node(struct node* node, stdelement e){
 			node->parent = root;
 			newNode->parent = root;
 		}else{
-			newNode->parent = node->parent;
-			insert_into_node(node->parent, middle);
+			struct node* newParent = insert_into_node(node->parent, middle);
+			i = getIndex(node->parent, middle);
+			if(newParent == NULL){
+				newNode->parent = node->parent;
 
-			for(i = 0; i < node->parent->number_of_elements; i++){
-				if(node->parent->elements[i] > node->elements[0]){
-					short j;
-					for(j = MAXNODE; j > i; j--){
-						node->parent->children[j] = node->parent->children[j-1];
-					}
-					node->parent->children[i] = node;
-					node->parent->children[i+1] = newNode;
-					break;
-				}
-			}
+				moveChildren(node->parent, i);
+				node->parent->children[i] = node;
+				node->parent->children[i+1] = newNode;
+ 			} else{
+ 				if(i == -1){
+ 					i = getIndex(newParent, middle);
+ 					newNode->parent = newParent;
+
+ 					if(i == -1){
+ 						node->parent->children[ORDER] = node;
+ 						newParent->children[0] = newNode;
+ 					} else{
+ 						node->parent = newParent;
+
+ 						moveChildren(newParent, i);
+ 						newParent->children[i+1] = newNode;
+ 					}
+ 				}else{
+ 					newNode->parent = node->parent;
+
+ 					moveChildren(node->parent, i);
+ 					node->parent->children[i+1] = newNode;
+ 				}
+ 			}
 		}
 	} else{
 		//case: new element is first or between other elements
@@ -98,13 +122,26 @@ void insert_into_node(struct node* node, stdelement e){
 		node->elements[index] = e;
 		node->number_of_elements++;
 	}
+	return newNode;
 }
 
+
+
 short getIndex(struct node* node, stdelement e){
-	short i;
+	unsigned short i, result = -1;
 	for(i = 0; i < node->number_of_elements; i++){
-		if(node->elements[i] > e) break;
+		if(node->elements[i] == e){
+			result = i;
+			break;
+		}
 	}
-	return i;
+	return result;
+}
+
+void moveChildren(struct node* node, short index){
+	unsigned short i;
+	for(i = node->number_of_elements; i > index; i--){
+		node->children[i] = node->children[i-1];
+	}
 }
 

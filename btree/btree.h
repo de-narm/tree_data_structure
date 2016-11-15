@@ -41,8 +41,9 @@ int save_btree_part(FILE* fd, node_pointer tree, int x, int y, int prev_stride);
 int save_btree(const char* path, node_pointer tree);
 
 short insert(stdelement e);
-void insert_into_node(struct node* node, stdelement e);
+struct node *insert_into_node(struct node* node, stdelement e);
 short getIndex(struct node* node, stdelement e);
+void moveChildren(struct node* node, short index);
 
 void delete(stdelement e);
 void delete_leaf(struct node* node, stdelement e);
