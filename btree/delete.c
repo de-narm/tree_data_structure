@@ -20,42 +20,54 @@ void delete_leaf(struct node* node, stdelement e) {
   //restore balance if necessary
   if(node->number_of_elements < ORDER) {
     struct node* parent = node->parent;
+    //new root node, if there's no parent and no elements in root left
+    if(!parent) {
+        if(node->number_of_elements == 0) {
+            root=node->children[0];
+            free(node->parent);
+        }
+        return;
+    }
     int i;
     for (i = 0; i < (MAXNODE+1); i++) {
       if(parent->children[i] == node)
         break;
     }  
     //test left/right neighbours
-    if(i != 0 && parent->children[i-1]->number_of_elements > ORDER) {
-        struct node* left = parent->children[i-1];
-        int j;
-        //shift element
-        for(j = (MAXNODE-1); j > 0; j--) {
-          node->elements[i] = node->elements[i-1];
+    if(i != 0) {
+        if(parent->children[i-1]->number_of_elements > ORDER) {
+            struct node* left = parent->children[i-1];
+            int j;
+            //shift element
+            for(j = (MAXNODE-1); j > 0; j--) {
+              node->elements[i] = node->elements[i-1];
+            }
+            node->elements[0] = parent->elements[i-1];
+            parent->elements[i-1] = left->elements[left->number_of_elements-1];
+            node->number_of_elements++;
+            left->number_of_elements--;
+            return;
         }
-        node->elements[0] = parent->elements[i-1];
-        parent->elements[i-1] = left->elements[left->number_of_elements-1];
-        node->number_of_elements++;
-        left->number_of_elements--;
-        return;
     }
-    if(i != MAXNODE && parent->children[i+1]->number_of_elements > ORDER) {
-        struct node* right = parent->children[i+1];
-        //shift element
-        node->elements[node->number_of_elements] = parent->elements[i];
-        parent->elements[i] = right->elements[0];
-        int j;
-        for(j = 0; j < MAXNODE; j++) {
-          right->elements[j] = right->elements[j+1];
+    if(i != MAXNODE) {
+        if(parent->children[i+1]->number_of_elements > ORDER) {
+            struct node* right = parent->children[i+1];
+            //shift element
+            node->elements[node->number_of_elements] = parent->elements[i];
+            parent->elements[i] = right->elements[0];
+            int j;
+            for(j = 0; j < MAXNODE; j++) {
+              right->elements[j] = right->elements[j+1];
+            }
+            node->number_of_elements++;
+            right->number_of_elements--;
+            return;
         }
-        node->number_of_elements++;
-        right->number_of_elements--;
-        return;
     }
 
     //if both neighbours fail, merge with preference for the right one
     struct node* right;
-    if(i != (MAXNODE))
+    if(i != (node->number_of_elements))
       right = parent->children[i+1];
     else {
       right = node;
