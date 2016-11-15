@@ -82,6 +82,7 @@ void delete_leaf(struct node* node, stdelement e) {
     node->number_of_elements += (right->number_of_elements+1);
     
     //delete the pointer to right neighbour
+    free(parent->children[i+1]);
     for(j = i+1; j < MAXNODE; j++) {
       parent->children[j] = parent->children[j+1];
     }
