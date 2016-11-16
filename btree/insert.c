@@ -96,6 +96,7 @@ struct node* insert_into_node(struct node* node, stdelement e){
  					newNode->parent = newParent;
 
  					if(i == -1){
+ 						moveChildren(newParent, 0);
  						node->parent->children[ORDER] = node;
  						newParent->children[0] = newNode;
  					} else{
