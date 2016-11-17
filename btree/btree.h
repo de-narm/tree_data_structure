@@ -40,24 +40,30 @@ struct compare_result {
     int *path;
 };
 
-struct node* root;
+typedef struct {
+    struct node *root;
+    int depth;
+} * btree;
 
-int get_btree_depth(node_pointer tree);
+btree create_btree();
+void destroy_btree(btree tree);
+
+int get_btree_depth(btree tree);
 int render_node_to_svg(FILE* fd, node_pointer node, int x, int y);
 int save_btree_part(FILE* fd, node_pointer tree, int x, int y, int prev_stride);
-int save_btree(const char* path, node_pointer tree);
+int save_btree(const char* path, btree tree);
 
-short insert(stdelement e);
-struct node *insert_into_node(struct node* node, stdelement e);
+short insert(btree tree, stdelement e);
+struct node *insert_into_node(btree tree, struct node* node, stdelement e);
 short getIndex(struct node* node, stdelement e);
 void moveChildren(struct node* node, short index);
 
-void delete(stdelement e);
-void delete_leaf(struct node* node, stdelement e);
+void delete(btree tree, stdelement e);
+void delete_leaf(btree tree, struct node* node, stdelement e);
 
-struct node_element* findElement(stdelement e);
+struct node_element* findElement(btree tree, stdelement e);
 
-int compare(struct node *tree_a, struct node *tree_b, struct compare_result *result);
-void print_compare(struct node *tree_a, struct node *tree_b);
+int compare(btree tree_a, btree tree_b, struct compare_result *result);
+void print_compare(btree tree_a, btree tree_b);
 
 #endif //__BTREE_H__

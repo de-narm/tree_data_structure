@@ -7,28 +7,28 @@
 
 #include "btree.h"
 
-short insert(stdelement e){
-	if(!(root == NULL)){
+short insert(btree tree, stdelement e){
+	if(!(tree->root == NULL)){
 		//look if element is already in tree
-		struct node_element* selected = findElement(e);
+		struct node_element* selected = findElement(tree, e);
 		/*
 		 * if not insert element into tree,
 		 * correct node already selected by findElement function
 		 */
 		if(selected->index == -1){
-			insert_into_node(selected->node, e);
+			insert_into_node(tree, selected->node, e);
 		}
 	//if node is empty create new root with e as first element
 	}else{
-		root = calloc(1, sizeof(struct node));
-		root->elements[0] = e;
-		root->number_of_elements = 1;
+		tree->root = calloc(1, sizeof(struct node));
+		tree->root->elements[0] = e;
+		tree->root->number_of_elements = 1;
 	}
 	//return current selected/new created node
 	return 0;
 }
 
-struct node* insert_into_node(struct node* node, stdelement e){
+struct node* insert_into_node(btree tree, struct node* node, stdelement e){
 	//get index where element shall be added
 	short i, index;
 	for(i = 0; i < node->number_of_elements; i++){
@@ -86,16 +86,16 @@ struct node* insert_into_node(struct node* node, stdelement e){
 		node->number_of_elements = ORDER;
 		newNode->number_of_elements = ORDER;
 		//if split node is root node create new root with middle element
-		if(node == root){
-			root = NULL;
-			insert(middle);
-			root->children[0] = node;
-			root->children[1] = newNode;
-			node->parent = root;
-			newNode->parent = root;
+		if(node == tree->root){
+			tree->root = NULL;
+			insert(tree, middle);
+			tree->root->children[0] = node;
+			tree->root->children[1] = newNode;
+			node->parent = tree->root;
+			newNode->parent = tree->root;
 		}else{
 			//give middle value to node above
-			struct node* newParent = insert_into_node(node->parent, middle);
+			struct node* newParent = insert_into_node(tree, node->parent, middle);
 			i = getIndex(node->parent, middle);
 			//check if node above was also split
 			if(newParent == NULL){
