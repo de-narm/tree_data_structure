@@ -33,6 +33,13 @@ struct node_element{
 	short index;
 };
 
+struct compare_result {
+    int is_equal;
+    enum {DEPTH, NUMBER_OF_ELEMENTS, ELEMENT} difference;
+    int depth;
+    int *path;
+};
+
 struct node* root;
 
 int get_btree_depth(node_pointer tree);
@@ -49,5 +56,8 @@ void delete(stdelement e);
 void delete_leaf(struct node* node, stdelement e);
 
 struct node_element* findElement(stdelement e);
+
+int compare(struct node *tree_a, struct node *tree_b, struct compare_result *result);
+void print_compare(struct node *tree_a, struct node *tree_b);
 
 #endif //__BTREE_H__

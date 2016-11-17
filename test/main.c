@@ -38,6 +38,10 @@ int main(void){
   ++num_test;
   res += save_btree_test2();
   ++num_test;
+  res += compare_equal_test();
+  ++num_test;
+  res += compare_unequal_test();
+  ++num_test;
   
   printf("Number of tests: %d\nNumber of failed tests: %d\n", num_test, res);
   return res;

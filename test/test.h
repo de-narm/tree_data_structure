@@ -31,4 +31,10 @@ int save_btree_part_test();
 int save_btree_test();
 int save_btree_test2();
 
+/*
+ * compare tests
+ */
+int compare_equal_test();
+int compare_unequal_test();
+
 #endif //__TEST_H__

@@ -2,7 +2,7 @@ CC=gcc
 CFLAGS=-Wall -Wextra
 LIBS=-lm
 TARGET=_test
-FILES=main.c btree_test.c svg_test.c assert.c ../btree/insert.c ../btree/search.c ../btree/btree.c ../btree/svg.c
+FILES=main.c btree_test.c svg_test.c compare_test.c assert.c ../btree/insert.c ../btree/search.c ../btree/btree.c ../btree/svg.c ../btree/compare.c
 .PHONY: clean all test
 
 all: $(TARGET)
