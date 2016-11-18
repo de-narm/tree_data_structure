@@ -7,6 +7,13 @@ Just add your own code to the [main.c](/main.c) file und build the program using
 
 For the documentation see [Documentation](/documentation/).
 
+## Folder Structure
+
+The [btree](/btree/) folder contains all files related to the data structure. These files contain for example output and compare functions.
+
+The [test](/test/) folder contains test for most of the implemented btree functions.
+To run the test change to the test directory and use `make test`.
+
 ## Contributers
 
 Sebastian Benner [De-Narm](https://github.com/De-Narm)<br>
