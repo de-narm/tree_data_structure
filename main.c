@@ -3,5 +3,5 @@
 int main(void){
   /*insert your code below*/
 
-  return res;
+  return EXIT_SUCCESS;
 }
