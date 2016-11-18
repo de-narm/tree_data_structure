@@ -1,16 +1,30 @@
 #include "btree.h"
 
-int get_btree_depth(node_pointer tree) {
-  int ret = 0;
-  int i, current;
-  if(tree == NULL)
-    return 0;
-  for(i = 0; i <= MAXNODE; ++i) {
-    current = get_btree_depth(tree->children[i]);
-    if(current > ret)
-      ret = current;
-  }
-  return ret + 1;
+btree create_btree() {
+    return calloc(1, sizeof(btree));
+}
+
+void destroy_btree_node(node_pointer node) {
+    if(!node)
+        return;
+    for(int i = 0; i <= node->number_of_elements; i++)
+        destroy_btree_node(node->children[i]);
+    free(node);
+}
+
+void destroy_btree(btree tree) {
+    destroy_btree_node(tree->root);
+    free(tree);
+}
+
+int get_btree_depth(btree tree) {
+    node_pointer node = tree->root;
+    int i = 0;
+    while(node) {
+        node = node->children[0];
+        i++;
+    }
+    return i;
 }
 
 int render_node_to_svg(FILE* fd, node_pointer node, int x, int y) {
@@ -91,7 +105,7 @@ int save_btree_part(FILE* fd, node_pointer tree, int x, int y, int prev_stride) 
   return ret;
 }
 
-int save_btree(const char* path, node_pointer tree) {
+int save_btree(const char* path, btree tree) {
   int ret;
   int depth, width, height, x, prev_stride;
   FILE* fd = fopen(path, "w");
@@ -105,7 +119,7 @@ int save_btree(const char* path, node_pointer tree) {
   ret = svg_save_header(fd, width, height);
   if(ret != EXIT_SUCCESS)
     return ret;
-  ret = save_btree_part(fd, tree, x, NODE_HOR_SPACING, prev_stride);
+  ret = save_btree_part(fd, tree->root, x, NODE_HOR_SPACING, prev_stride);
   if(ret != EXIT_SUCCESS) {
     fclose(fd);
     return ret;

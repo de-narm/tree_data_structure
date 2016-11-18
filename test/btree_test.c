@@ -28,9 +28,14 @@ int get_btree_depth_test() {
   n.children[3] = NULL;
   n.children[4] = NULL;
 
+  btree tree = create_btree();
+  tree->root = &n;
+
   puts("get_btree_depth_test()");
 
-  int depth = get_btree_depth(&n);
+  int depth = get_btree_depth(tree);
+
+  free(tree);
 
   ret = assert_equals_int(2, depth);
   
@@ -53,7 +58,10 @@ int render_node_to_svg_test() {
   n.children[3] = NULL;
   n.children[4] = NULL;
 
-  int depth = get_btree_depth(&n);
+  btree tree = create_btree();
+  tree->root = &n;
+
+  int depth = get_btree_depth(tree);
   int width = svg_get_width(depth);
   int height = svg_get_height(depth);
 
@@ -72,7 +80,7 @@ int render_node_to_svg_test() {
     return EXIT_FAILURE;
   }
 
-  ret = render_node_to_svg(fd, &n, 20, 30);
+  ret = render_node_to_svg(fd, tree->root, 20, 30);
   if(ret != EXIT_SUCCESS) {
     fprintf(stderr, "Error: Couldn't save file!\n");
     fclose(fd);
@@ -87,6 +95,8 @@ int render_node_to_svg_test() {
   }
 
   fclose(fd);
+
+  free(tree);
 
   ret = assert_equals_file("render_node_to_svg_reference.svg", "render_node_to_svg_test.test.svg", 1024);
 
@@ -106,7 +116,10 @@ int render_node_to_svg_test2() {  int ret;
   n.children[3] = NULL;
   n.children[4] = NULL;
 
-  int depth = get_btree_depth(&n);
+  btree tree = create_btree();
+  tree->root = &n;
+
+  int depth = get_btree_depth(tree);
   int width = svg_get_width(depth);
   int height = svg_get_height(depth);
   puts("render_node_to_svg_test2()");
@@ -124,7 +137,7 @@ int render_node_to_svg_test2() {  int ret;
     return EXIT_FAILURE;
   }
 
-  ret = render_node_to_svg(fd, &n, 20, 30);
+  ret = render_node_to_svg(fd, tree->root, 20, 30);
   if(ret != EXIT_SUCCESS) {
     fprintf(stderr, "Error: Couldn't save file!\n");
     fclose(fd);
@@ -139,6 +152,8 @@ int render_node_to_svg_test2() {  int ret;
   }
 
   fclose(fd);
+
+  free(tree);
 
   ret = assert_equals_file("render_node_to_svg2_reference.svg", "render_node_to_svg_test2.test.svg", 1024);
 
@@ -229,8 +244,11 @@ int save_btree_part_test() {
   n3.parent = &n;
   n4.parent = &n;
   n5.parent = &n;
+
+  btree tree = create_btree();
+  tree->root = &n;
   
-  int depth = get_btree_depth(&n);
+  int depth = get_btree_depth(tree);
   int width = svg_get_width(depth);
   int height = svg_get_height(depth);
   puts("save_btree_part_test()");
@@ -248,7 +266,7 @@ int save_btree_part_test() {
     return EXIT_FAILURE;
   }
 
-  ret = save_btree_part(fd, &n, 1000, 30, 2455 - 30);
+  ret = save_btree_part(fd, tree->root, 1000, 30, 2455 - 30);
   if(ret != EXIT_SUCCESS) {
     fprintf(stderr, "Error: Couldn't save file!\n");
     fclose(fd);
@@ -263,6 +281,8 @@ int save_btree_part_test() {
   }
 
   fclose(fd);
+
+  free(tree);
 
   ret = assert_equals_file("save_btree_part_reference.svg", "save_btree_part_test.test.svg", 8192);
 
@@ -353,14 +373,19 @@ int save_btree_test() {
   n3.parent = &n;
   n4.parent = &n;
   n5.parent = &n;
+
+  btree tree = create_btree();
+  tree->root = &n;
   
   puts("save_btree_test()");
 
-  ret = save_btree("save_btree_test.test.svg", &n);
+  ret = save_btree("save_btree_test.test.svg", tree);
   if(ret != EXIT_SUCCESS) {
     fprintf(stderr, "Error: Couldn't save file!\n");
     return EXIT_FAILURE;
   }
+
+  free(tree);
 
   ret = assert_equals_file("save_btree_reference.svg", "save_btree_test.test.svg", 8192);
 
@@ -520,14 +545,19 @@ int save_btree_test2() {
   n3.parent = &n;
   n4.parent = &n;
   n5.parent = &n;
+
+  btree tree = create_btree();
+  tree->root = &n;
   
   puts("save_btree_test2()");
 
-  ret = save_btree("save_btree_test2.test.svg", &n);
+  ret = save_btree("save_btree_test2.test.svg", tree);
   if(ret != EXIT_SUCCESS) {
     fprintf(stderr, "Error: Couldn't save file!\n");
     return EXIT_FAILURE;
   }
+
+  free(tree);
 
   ret = assert_equals_file("save_btree2_reference.svg", "save_btree_test2.test.svg", 16384);
 

@@ -2,19 +2,22 @@
 
 int compare_equal_test() {
     puts("compare_equal_test()");
-    insert(43);
-    insert(63);
-    insert(66);
-    insert(67);
-    insert(82);
-    insert(52);
-    insert(25);
-    insert(81);
-    insert(48);
-    insert(23);
-    insert(42);
-    insert(29);
-    insert(41);
+
+    btree tree = create_btree();
+
+    insert(tree, 43);
+    insert(tree, 63);
+    insert(tree, 66);
+    insert(tree, 67);
+    insert(tree, 82);
+    insert(tree, 52);
+    insert(tree, 25);
+    insert(tree, 81);
+    insert(tree, 48);
+    insert(tree, 23);
+    insert(tree, 42);
+    insert(tree, 29);
+    insert(tree, 41);
 
     struct node c1 = {
         .number_of_elements = 2,
@@ -47,27 +50,42 @@ int compare_equal_test() {
     c3.parent = &croot;
     c4.parent = &croot;
 
-    if(!compare(root, &croot, NULL)) {
+    btree tree2 = create_btree();
+    tree2->root = &croot;
+
+    int ret = !compare(tree, tree2, NULL);
+
+    destroy_btree(tree);
+    free(tree2);
+
+    if(ret)
         puts("Expected trees to be equal but they aren't.");
-        return 1;
-    }
-    return 0;
+    return ret;
 }
 
 int compare_unequal_test() {
     puts("compare_unequal_test()");
-    insert(43);
-    insert(63);
-    insert(66);
+
+    btree tree = create_btree();
+
+    insert(tree, 43);
+    insert(tree, 63);
+    insert(tree, 66);
 
     struct node croot = {
         .number_of_elements = 3,
         .elements = {29, 48, 66},
     };
 
-    if(compare(root, &croot, NULL)) {
+    btree tree2 = create_btree();
+    tree2->root = &croot;
+
+    int ret = compare(tree, tree2, NULL);
+
+    destroy_btree(tree);
+    free(tree2);
+
+    if(ret)
         puts("Expected trees not to be equal but they are.");
-        return 1;
-    }
-    return 0;
+    return ret;
 }

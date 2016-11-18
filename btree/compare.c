@@ -27,7 +27,7 @@
  * Method used internaly for recursing through the tree. Params and return value are the same
  * as for compare().
  */
-int inner_compare(struct node *tree_a, struct node *tree_b, struct compare_result *result) {
+int inner_compare(node_pointer tree_a, node_pointer tree_b, struct compare_result *result) {
     // if the trees are NULL, this was a leaf node
     if(!tree_a || !tree_b) {
         // if one tree pointer is null and the other is not, either the trees would have
@@ -84,7 +84,7 @@ int inner_compare(struct node *tree_a, struct node *tree_b, struct compare_resul
  *               May be NULL if not needed
  * @return 1 if tree_a and tree_b are equal, 0 otherwise
  */
-int compare(struct node *tree_a, struct node *tree_b, struct compare_result *result) {
+int compare(btree tree_a, btree tree_b, struct compare_result *result) {
     // compare the depth of the two trees
     int depth;
     if((depth = get_btree_depth(tree_a)) != get_btree_depth(tree_b)) {
@@ -100,7 +100,7 @@ int compare(struct node *tree_a, struct node *tree_b, struct compare_result *res
     }
 
     // recursively compare the trees
-    if(!inner_compare(tree_a, tree_b, result))
+    if(!inner_compare(tree_a->root, tree_b->root, result))
         return false;
 
     if(result)
@@ -115,7 +115,7 @@ int compare(struct node *tree_a, struct node *tree_b, struct compare_result *res
  * @param tree_a A pointer to the root of a tree
  * @param tree_b A pointer to the root of another tree
  */
-void print_compare(struct node *tree_a, struct node *tree_b) {
+void print_compare(btree tree_a, btree tree_b) {
     struct compare_result result;
     compare(tree_a, tree_b, &result);
     if(result.is_equal) {
@@ -127,7 +127,7 @@ void print_compare(struct node *tree_a, struct node *tree_b) {
         return;
     }
     // iterate through the tree to find the node marked in result
-    struct node *node_a = tree_a, *node_b = tree_b;
+    struct node *node_a = tree_a->root, *node_b = tree_b->root;
     for(int i = 0; i < result.depth; i++) {
         node_a = node_a->children[result.path[i]];
         node_b = node_b->children[result.path[i]];

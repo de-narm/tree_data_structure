@@ -1,6 +1,6 @@
 #include "btree.h"
 
-void delete_leaf(struct node* node, stdelement e) {
+void delete_leaf(btree tree, struct node* node, stdelement e) {
   //get index of e
   int i;
   for(i = 0; i < node->number_of_elements; i++) {
@@ -23,7 +23,7 @@ void delete_leaf(struct node* node, stdelement e) {
     //new root node, if there's no parent and no elements in root left
     if(!parent) {
         if(node->number_of_elements == 0) {
-            root=node->children[0];
+            tree->root=node->children[0];
             free(node->parent);
         }
         return;
@@ -92,13 +92,13 @@ void delete_leaf(struct node* node, stdelement e) {
   return;
 }
 
-void delete(stdelement e) {
-  struct node_element* node_e = findElement(e);
+void delete(btree tree, stdelement e) {
+  struct node_element* node_e = findElement(tree, e);
   if (!node_e)
     return;
   struct node* node = node_e->node;
   if(!node->children[0])
-    delete_leaf(node, e);
+    delete_leaf(tree, node, e);
   else { 
     int i = node_e->index;
     //get next larger value
@@ -107,6 +107,6 @@ void delete(stdelement e) {
       child = child->children[0];
     }
     node->elements[i] = child->elements[0];
-    delete_leaf(child, child->elements[0]);
+    delete_leaf(tree, child, child->elements[0]);
   }  
 }

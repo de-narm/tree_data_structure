@@ -7,9 +7,9 @@
 
 #include "btree.h"
 
-struct node_element* findElement(stdelement e){
+struct node_element* findElement(btree tree, stdelement e){
 	short i;
-	struct node* next = root;
+	struct node* next = tree->root;
 	struct node_element* selectedNode = malloc(sizeof(struct node_element));
 	selectedNode->index = -1;
 	do{
