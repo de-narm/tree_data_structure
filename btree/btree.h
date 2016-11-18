@@ -42,7 +42,6 @@ struct compare_result {
 
 typedef struct {
     struct node *root;
-    int depth;
 } * btree;
 
 btree create_btree();
