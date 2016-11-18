@@ -34,3 +34,7 @@
 
 # Temporary saves
 *~
+
+# Test files
+*.test.svg
+*_test
