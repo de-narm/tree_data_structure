@@ -11,6 +11,8 @@ For the documentation see [Documentation](/documentation/).
 
 The [btree](/btree/) folder contains all files related to the data structure. These files contain for example output and compare functions.
 
+The [documentation](/documentation/) folder holds a short documentation for the most important functions.
+
 The [test](/test/) folder contains test for most of the implemented btree functions.
 To run the test change to the test directory and use `make test`.
 
