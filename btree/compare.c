@@ -4,26 +4,6 @@
 #define true 1
 
 /*
- * For struct compare_result:
- * is_equal:
- *   true if the trees are equal, false otherwise
- * difference:
- *   only valid if is_equal == false
- *   DEPTH if the trees have a different depth
- *   NUMBER_OF_ELEMENTS if a node was found in which the number of elements differs
- *   ELEMENT if an element was found of which the value differs
- * depth:
- *   only valid if is_equal == false and difference != DEPTH
- *   contains the level on which a difference was found. the root node is level 0
- * path:
- *   only valid if is_equal == false and difference != DEPTH
- *   contains a path from the root node to the node in which the difference was found.
- *   so {1} means the first child of the root node and {2, 0} means the zeroth of the
- *   second child of the root node. this array contains `depth` values. if difference ==
- *   ELEMENT, this contains an additional value for the index of the elemennt.
- */
-
-/*
  * Method used internaly for recursing through the tree. Params and return value are the same
  * as for compare().
  */
@@ -74,16 +54,6 @@ int inner_compare(node_pointer tree_a, node_pointer tree_b, struct compare_resul
     return true;
 }
 
-/*
- * This method returns true if two B-Trees are equal and false otherwise. Optionally
- * some additional informations can be given about what difference was found and where.
- *
- * @param tree_a A pointer to the root of a tree
- * @param tree_b A pointer to the root of another tree
- * @param result A struct, into which additional informations will be written.
- *               May be NULL if not needed
- * @return 1 if tree_a and tree_b are equal, 0 otherwise
- */
 int compare(btree tree_a, btree tree_b, struct compare_result *result) {
     // compare the depth of the two trees
     int depth;
@@ -108,13 +78,6 @@ int compare(btree tree_a, btree tree_b, struct compare_result *result) {
     return true;
 }
 
-/*
- * Compare two trees and output the findings to stdout. This exists mostly for
- * debug purposes and to give an example on how to use the result struct.
- *
- * @param tree_a A pointer to the root of a tree
- * @param tree_b A pointer to the root of another tree
- */
 void print_compare(btree tree_a, btree tree_b) {
     struct compare_result result;
     compare(tree_a, tree_b, &result);

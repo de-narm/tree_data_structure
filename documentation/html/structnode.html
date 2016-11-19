@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>B-Tree: node Strukturreferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">B-Tree
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.11 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Datenstrukturen</span></a></li>
+      <li><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Datenstrukturen</span></a></li>
+      <li><a href="classes.html"><span>Datenstruktur-Verzeichnis</span></a></li>
+      <li><a href="functions.html"><span>Datenstruktur-Elemente</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Datenfelder</a>  </div>
+  <div class="headertitle">
+<div class="title">node Strukturreferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="btree_8h_source.html">btree.h</a>&gt;</code></p>
+<div class="dynheader">
+Zusammengehörigkeiten von node:</div>
+<div class="dyncontent">
+<div class="center"><img src="structnode__coll__graph.png" border="0" usemap="#node_coll__map" alt="Collaboration graph"/></div>
+<map name="node_coll__map" id="node_coll__map">
+</map>
+<center><span class="legend">[<a href="graph_legend.html">Legende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Datenfelder</h2></td></tr>
+<tr class="memitem:a30f06a67bc8320a9fd2317d93971662a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="btree_8h.html#adb97b628c8cb998ccd840435d2d24e64">node_pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnode.html#a30f06a67bc8320a9fd2317d93971662a">parent</a></td></tr>
+<tr class="separator:a30f06a67bc8320a9fd2317d93971662a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f339b303d2ccea5c1180a6ee44b2372"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnode.html#a9f339b303d2ccea5c1180a6ee44b2372">number_of_elements</a></td></tr>
+<tr class="separator:a9f339b303d2ccea5c1180a6ee44b2372"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47e9f4e2a8ecc8a26898e6dfe50ea691"><td class="memItemLeft" align="right" valign="top"><a class="el" href="btree_8h.html#af88f361564b590a09208f756b70a3a07">stdelement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnode.html#a47e9f4e2a8ecc8a26898e6dfe50ea691">elements</a> [MAXNODE]</td></tr>
+<tr class="separator:a47e9f4e2a8ecc8a26898e6dfe50ea691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86fb0e97179fa7ec990c35ab738bc992"><td class="memItemLeft" align="right" valign="top"><a class="el" href="btree_8h.html#adb97b628c8cb998ccd840435d2d24e64">node_pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnode.html#a86fb0e97179fa7ec990c35ab738bc992">children</a> [MAXNODE+1]</td></tr>
+<tr class="separator:a86fb0e97179fa7ec990c35ab738bc992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>struct for the b-tree data structure </p>
+</div><h2 class="groupheader">Dokumentation der Datenelemente</h2>
+<a class="anchor" id="a86fb0e97179fa7ec990c35ab738bc992"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="btree_8h.html#adb97b628c8cb998ccd840435d2d24e64">node_pointer</a> node::children[MAXNODE+1]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>array of child nodes </p>
+
+</div>
+</div>
+<a class="anchor" id="a47e9f4e2a8ecc8a26898e6dfe50ea691"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="btree_8h.html#af88f361564b590a09208f756b70a3a07">stdelement</a> node::elements[MAXNODE]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>array to store elements in node </p>
+
+</div>
+</div>
+<a class="anchor" id="a9f339b303d2ccea5c1180a6ee44b2372"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short node::number_of_elements</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>number of stored elements </p>
+
+</div>
+</div>
+<a class="anchor" id="a30f06a67bc8320a9fd2317d93971662a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="btree_8h.html#adb97b628c8cb998ccd840435d2d24e64">node_pointer</a> node::parent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>parent node of this node </p>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Struktur wurde erzeugt aufgrund der Datei:<ul>
+<li><a class="el" href="btree_8h_source.html">btree.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

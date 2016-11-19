@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>B-Tree: compare_result Strukturreferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">B-Tree
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.11 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Datenstrukturen</span></a></li>
+      <li><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Datenstrukturen</span></a></li>
+      <li><a href="classes.html"><span>Datenstruktur-Verzeichnis</span></a></li>
+      <li><a href="functions.html"><span>Datenstruktur-Elemente</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Öffentliche Typen</a> &#124;
+<a href="#pub-attribs">Datenfelder</a>  </div>
+  <div class="headertitle">
+<div class="title">compare_result Strukturreferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="btree_8h_source.html">btree.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Öffentliche Typen</h2></td></tr>
+<tr class="memitem:ab5e3fda97ba5a2c2e693f37b6d4cd2e6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>DEPTH</b>, 
+<b>NUMBER_OF_ELEMENTS</b>, 
+<b>ELEMENT</b>
+ }</td></tr>
+<tr class="separator:ab5e3fda97ba5a2c2e693f37b6d4cd2e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Datenfelder</h2></td></tr>
+<tr class="memitem:ab619cced02b93c7c6ba54c2d3f174f45"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcompare__result.html#ab619cced02b93c7c6ba54c2d3f174f45">is_equal</a></td></tr>
+<tr class="separator:ab619cced02b93c7c6ba54c2d3f174f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48bd874a9f8549ca74ec61c69edd3543"><td class="memItemLeft" align="right" valign="top">enum compare_result:: { ... } &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcompare__result.html#a48bd874a9f8549ca74ec61c69edd3543">difference</a></td></tr>
+<tr class="separator:a48bd874a9f8549ca74ec61c69edd3543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c9fba73edbdd3a038159e12793fdb37"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcompare__result.html#a3c9fba73edbdd3a038159e12793fdb37">depth</a></td></tr>
+<tr class="separator:a3c9fba73edbdd3a038159e12793fdb37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8166309cca9db8e8f30c5901d86d5750"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcompare__result.html#a8166309cca9db8e8f30c5901d86d5750">path</a></td></tr>
+<tr class="separator:a8166309cca9db8e8f30c5901d86d5750"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>struct to store result of comparison of b-trees </p>
+</div><h2 class="groupheader">Dokumentation der Aufzählungstypen</h2>
+<a class="anchor" id="ab5e3fda97ba5a2c2e693f37b6d4cd2e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>only valid if is_equal == false DEPTH if the trees have a different depth NUMBER_OF_ELEMENTS if a node was found in which the number of elements differs ELEMENT if an element was found of which the value differs </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Datenelemente</h2>
+<a class="anchor" id="a3c9fba73edbdd3a038159e12793fdb37"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int compare_result::depth</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>only valid if is_equal == false and difference != DEPTH contains the level on which a difference was found. the root node is level 0 </p>
+
+</div>
+</div>
+<a class="anchor" id="a48bd874a9f8549ca74ec61c69edd3543"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum { ... }   compare_result::difference</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>only valid if is_equal == false DEPTH if the trees have a different depth NUMBER_OF_ELEMENTS if a node was found in which the number of elements differs ELEMENT if an element was found of which the value differs </p>
+
+</div>
+</div>
+<a class="anchor" id="ab619cced02b93c7c6ba54c2d3f174f45"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int compare_result::is_equal</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>true (1) if the trees are equal, false (0) otherwise </p>
+
+</div>
+</div>
+<a class="anchor" id="a8166309cca9db8e8f30c5901d86d5750"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* compare_result::path</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>only valid if is_equal == false and difference != DEPTH contains a path from the root node to the node in which the difference was found. so {1} means the first child of the root node and {2, 0} means the zeroth of the second child of the root node. this array contains <code>depth</code> values. if difference == ELEMENT, this contains an additional value for the index of the elemennt. </p>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Struktur wurde erzeugt aufgrund der Datei:<ul>
+<li><a class="el" href="btree_8h_source.html">btree.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>
