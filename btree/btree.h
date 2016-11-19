@@ -24,7 +24,7 @@ typedef struct node * node_pointer;
 typedef unsigned int stdelement;
 
 /**
- * struct for the b-tree data structure
+ * @brief struct for the b-tree data structure
  */
 struct node {
 	/** parent node of this node */
@@ -38,7 +38,7 @@ struct node {
 };
 
 /**
- * struct to store reference of node and index of an element
+ * @brief struct to store reference of node and index of an element
  */
 struct node_element{
 	/** node where element is stored */
@@ -48,7 +48,7 @@ struct node_element{
 };
 
 /**
- * struct to store result of comparison of b-trees
+ * @brief struct to store result of comparison of b-trees
  */
 struct compare_result {
 	/**
@@ -77,62 +77,62 @@ struct compare_result {
     int *path;
 };
 /**
- *	struct which contains the root of b-tree
+ *	@brief struct which contains the root of b-tree
  */
 typedef struct {
 	/** root of b-tree */
     struct node *root;
 } * btree;
 /**
- * Allocates memory for new b-tree
+ * @brief Allocates memory for new b-tree
  * @return new created (empty) b-tree
  */
 btree create_btree();
 /**
- *	Gives allocated memory free.
+ *	@brief Gives allocated memory free.
  *	@param tree tree which shall be destroyed
  */
 void destroy_btree(btree tree);
 /**
- * Calculates depth of b-tree.
+ * @brief Calculates depth of b-tree.
  * @param tree b-tree which depth shall be calculated
  * @return depth of b-tree
  */
 int get_btree_depth(btree tree);
 /**
- *
- * @param fd
- * @param node
- * @param x
- * @param y
- * @return
+ * @brief Writes node svg file.
+ * @param fd file where node shall be stored
+ * @param node node which shall be stored
+ * @param x x position of node in graph
+ * @param y y position of node in graph
+ * @return EXIT_SUCCESS if everything went right else EXIT_FAILURE
  */
 int render_node_to_svg(FILE* fd, node_pointer node, int x, int y);
 /**
- *
- * @param fd
- * @param tree
- * @param x
- * @param y
- * @param prev_stride
- * @return
+ * @brief Saves part of a b-tree to file
+ * @param fd file where part of b-tree shall be stored
+ * @param tree node from where part of b-tree shall be written
+ * @param x x position of node
+ * @param y y position of node
+ * @param prev_stride previous stride
+ * @return EXIT_SUCCESS if everything went right else EXIT_FAILURE
  */
 int save_btree_part(FILE* fd, node_pointer tree, int x, int y, int prev_stride);
 /**
- * Saves b-tree to svg file.
+ * @brief Saves b-tree to svg file.
  * @param path relative path and name of svg file
  * @param tree b-tree which shall be stored
  * @return status of file creation
  */
 int save_btree(const char* path, btree tree);
 /**
- * Inserts an element to b-tree
+ * @brief Inserts an element to b-tree
  * @param e element which shall be inserted
  * @param tree b-tree where element shall be inserted
  */
 short insert(btree tree, stdelement e);
 /**
- * Inserts element to node.
+ * @brief Inserts element to node.
  * @param node node where element shall be stored
  * @param e element which shall be stored
  * @param tree b-tree where element shall be inserted
@@ -140,40 +140,41 @@ short insert(btree tree, stdelement e);
  */
 struct node *insert_into_node(btree tree, struct node* node, stdelement e);
 /**
- * Tries to find element in node.
+ * @brief Tries to find element in node.
  * @param node node which shall be searched for element
  * @param e element which shall be searched for
  * @return index of element in node or -1 if element is not in node
  */
 short getIndex(struct node* node, stdelement e);
 /**
- * Moves children to next higher position.
+ * @brief Moves children to next higher position.
  * @param node node which children shall be moved
  * @param index index of child where shall be started
  */
 void moveChildren(struct node* node, short index);
 /**
- * Removes element from b-tree.
+ * @brief Removes element from b-tree.
  * @param e element which shall be removed
  * @param tree tree where element shall be removed
  */
 void delete(btree tree, stdelement e);
 /**
- * Removes element and entire leaf from b-tree.
+ * @brief Removes element and entire leaf from b-tree.
  * @param node node which shall be removed
  * @param e element which shall be removed
  * @param tree tree where element and node shall be removed
  */
 void delete_leaf(btree tree, struct node* node, stdelement e);
 /**
- * Tries to find element in tree.
+ * @brief Tries to find element in tree.
  * @param e element which shall be searched for
  * @param tree b-tree which shall be searched
  * @return node and index where element is stored or index -1 if element is not in tree
  */
 struct node_element* findElement(btree tree, stdelement e);
 /**
- * This method returns true if two B-Trees are equal and false otherwise. Optionally
+ * @brief Function to compare two b-tree with each other.
+ * This function returns true if two B-Trees are equal and false otherwise. Optionally
  * some additional informations can be given about what difference was found and where.
  *
  * @param tree_a A pointer to the root of a tree
@@ -184,6 +185,7 @@ struct node_element* findElement(btree tree, stdelement e);
  */
 int compare(btree tree_a, btree tree_b, struct compare_result *result);
 /**
+ * @brief Compare two trees and output the findings to stdout.
  * Compare two trees and output the findings to stdout. This exists mostly for
  * debug purposes and to give an example on how to use the result struct.
  *

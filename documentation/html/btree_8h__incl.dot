@@ -10,7 +10,7 @@ digraph "btree.h"
   Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="stdlib.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
   Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="btree_config.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$btree__config_8h_source.html"];
+  Node5 [label="btree_config.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$btree__config_8h.html",tooltip="Header file which contains order and maximum size of nodes. "];
   Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node6 [label="svg.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$svg_8h_source.html"];
   Node6 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];

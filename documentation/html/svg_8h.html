@@ -1,0 +1,434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>B-Tree: svg.h-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">B-Tree
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.11 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li><a href="annotated.html"><span>Datenstrukturen</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&#160;der&#160;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle">
+<div class="title">svg.h-Dateireferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Header file which contains definitions to write b-tree into svg file.  
+<a href="#details">Mehr ...</a></p>
+<div class="textblock"><code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="btree__config_8h_source.html">btree_config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="svg__config_8h_source.html">svg_config.h</a>&quot;</code><br />
+</div>
+<p><a href="svg_8h_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:ae3ac8a0242adcb97b9fdbf4cbf23b696"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svg_8h.html#ae3ac8a0242adcb97b9fdbf4cbf23b696">svg_get_width</a> (int depth)</td></tr>
+<tr class="memdesc:ae3ac8a0242adcb97b9fdbf4cbf23b696"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculates width of b-tree  <a href="#ae3ac8a0242adcb97b9fdbf4cbf23b696">Mehr ...</a><br /></td></tr>
+<tr class="separator:ae3ac8a0242adcb97b9fdbf4cbf23b696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acea2df4ea0bd69ac777934bc012169a7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svg_8h.html#acea2df4ea0bd69ac777934bc012169a7">svg_get_height</a> (int depth)</td></tr>
+<tr class="memdesc:acea2df4ea0bd69ac777934bc012169a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculates high of b-tree  <a href="#acea2df4ea0bd69ac777934bc012169a7">Mehr ...</a><br /></td></tr>
+<tr class="separator:acea2df4ea0bd69ac777934bc012169a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99e5743f294609c90f643d2e999191e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svg_8h.html#a99e5743f294609c90f643d2e999191e1">svg_save_header</a> (FILE *fd, int width, int height)</td></tr>
+<tr class="memdesc:a99e5743f294609c90f643d2e999191e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes header to svg file  <a href="#a99e5743f294609c90f643d2e999191e1">Mehr ...</a><br /></td></tr>
+<tr class="separator:a99e5743f294609c90f643d2e999191e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a4671c78d4a813d3cf18d8bbf07a88f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svg_8h.html#a2a4671c78d4a813d3cf18d8bbf07a88f">svg_save_footer</a> (FILE *fd)</td></tr>
+<tr class="memdesc:a2a4671c78d4a813d3cf18d8bbf07a88f"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes footer to svg file  <a href="#a2a4671c78d4a813d3cf18d8bbf07a88f">Mehr ...</a><br /></td></tr>
+<tr class="separator:a2a4671c78d4a813d3cf18d8bbf07a88f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a297b3a79277af1a5b0d114130423a865"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svg_8h.html#a297b3a79277af1a5b0d114130423a865">svg_render_rect</a> (FILE *fd, int x, int y, int width, int height)</td></tr>
+<tr class="memdesc:a297b3a79277af1a5b0d114130423a865"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates rectangle for node and writes into svg file  <a href="#a297b3a79277af1a5b0d114130423a865">Mehr ...</a><br /></td></tr>
+<tr class="separator:a297b3a79277af1a5b0d114130423a865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0712ae6005a08dc48e5ecaaa37b892cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svg_8h.html#a0712ae6005a08dc48e5ecaaa37b892cc">svg_render_line</a> (FILE *fd, int x1, int y1, int x2, int y2)</td></tr>
+<tr class="memdesc:a0712ae6005a08dc48e5ecaaa37b892cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes line which connects child and parent node into file  <a href="#a0712ae6005a08dc48e5ecaaa37b892cc">Mehr ...</a><br /></td></tr>
+<tr class="separator:a0712ae6005a08dc48e5ecaaa37b892cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9784e5b66c85c8e079d386566df5f81d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svg_8h.html#a9784e5b66c85c8e079d386566df5f81d">svg_begin_text</a> (FILE *fd)</td></tr>
+<tr class="memdesc:a9784e5b66c85c8e079d386566df5f81d"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes begin information to store string to svg file  <a href="#a9784e5b66c85c8e079d386566df5f81d">Mehr ...</a><br /></td></tr>
+<tr class="separator:a9784e5b66c85c8e079d386566df5f81d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fdf4b41bc05e011b168217068512eb9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svg_8h.html#a9fdf4b41bc05e011b168217068512eb9">svg_render_number_text</a> (FILE *fd, int number, int x, int y)</td></tr>
+<tr class="memdesc:a9fdf4b41bc05e011b168217068512eb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes number to svg file  <a href="#a9fdf4b41bc05e011b168217068512eb9">Mehr ...</a><br /></td></tr>
+<tr class="separator:a9fdf4b41bc05e011b168217068512eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfd49f01b48294454cdd1a2981f191a9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="svg_8h.html#adfd49f01b48294454cdd1a2981f191a9">svg_end_text</a> (FILE *fd)</td></tr>
+<tr class="memdesc:adfd49f01b48294454cdd1a2981f191a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes end information to store string to svg file  <a href="#adfd49f01b48294454cdd1a2981f191a9">Mehr ...</a><br /></td></tr>
+<tr class="separator:adfd49f01b48294454cdd1a2981f191a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Header file which contains definitions to write b-tree into svg file. </p>
+</div><h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a class="anchor" id="a9784e5b66c85c8e079d386566df5f81d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int svg_begin_text </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>writes begin information to store string to svg file </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>svg file where string shall be stored </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>EXIT_SUCCESS if everything went right else EXIT_FAILURE </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adfd49f01b48294454cdd1a2981f191a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int svg_end_text </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>writes end information to store string to svg file </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>svg file where string shall be stored </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>EXIT_SUCCESS if everything went right else EXIT_FAILURE </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acea2df4ea0bd69ac777934bc012169a7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int svg_get_height </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>depth</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>calculates high of b-tree </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">depth</td><td>depth of b-tree </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>height of b-tree </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae3ac8a0242adcb97b9fdbf4cbf23b696"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int svg_get_width </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>depth</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>calculates width of b-tree </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">depth</td><td>depth of b-tree </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>width of b-tree </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0712ae6005a08dc48e5ecaaa37b892cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int svg_render_line </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>writes line which connects child and parent node into file </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>svg file where line shall be stored </td></tr>
+    <tr><td class="paramname">x1</td><td>x position where line starts </td></tr>
+    <tr><td class="paramname">y1</td><td>y position where line starts </td></tr>
+    <tr><td class="paramname">x2</td><td>x position where line ends </td></tr>
+    <tr><td class="paramname">y2</td><td>y position where line ends </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>EXIT_SUCCESS if everything went right else EXIT_FAILURE </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9fdf4b41bc05e011b168217068512eb9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int svg_render_number_text </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>writes number to svg file </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>svg file number shall be stored </td></tr>
+    <tr><td class="paramname">number</td><td>number which shall be stored </td></tr>
+    <tr><td class="paramname">x</td><td>x position of number </td></tr>
+    <tr><td class="paramname">y</td><td>y position of number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>EXIT_SUCCESS if everything went right else EXIT_FAILURE </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a297b3a79277af1a5b0d114130423a865"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int svg_render_rect </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>creates rectangle for node and writes into svg file </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>svg file where rectangle shall be stored </td></tr>
+    <tr><td class="paramname">x</td><td>x position of rectangle </td></tr>
+    <tr><td class="paramname">y</td><td>y position of rectangle </td></tr>
+    <tr><td class="paramname">width</td><td>width of rectangle </td></tr>
+    <tr><td class="paramname">height</td><td>height of rectangle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>EXIT_SUCCESS if everything went right else EXIT_FAILURE </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2a4671c78d4a813d3cf18d8bbf07a88f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int svg_save_footer </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>writes footer to svg file </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>svg file where footer shall be written into </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>EXIT_SUCCESS if everything went right else EXIT_FAILURE </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a99e5743f294609c90f643d2e999191e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int svg_save_header </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>writes header to svg file </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>svg file where header shall be written into </td></tr>
+    <tr><td class="paramname">width</td><td>width of b-tree </td></tr>
+    <tr><td class="paramname">height</td><td>height of b-tree </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>EXIT_SUCCESS if everything went right else EXIT_FAILURE </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

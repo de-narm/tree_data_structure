@@ -55,27 +55,24 @@
 <div class="textblock"><code>#include &lt;math.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &quot;btree_config.h&quot;</code><br />
-<code>#include &quot;svg.h&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include-Abhängigkeitsdiagramm für btree.h:</div>
-<div class="dyncontent">
-<div class="center"><img src="btree_8h__incl.png" border="0" usemap="#btree_8h" alt=""/></div>
-<map name="btree_8h" id="btree_8h">
-</map>
-</div>
+<code>#include &quot;<a class="el" href="btree__config_8h_source.html">btree_config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="svg_8h_source.html">svg.h</a>&quot;</code><br />
 </div>
 <p><a href="btree_8h_source.html">gehe zum Quellcode dieser Datei</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Datenstrukturen</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnode.html">node</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">struct for the b-tree data structure  <a href="structnode.html#details">Mehr ...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnode__element.html">node_element</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">struct to store reference of node and index of an element  <a href="structnode__element.html#details">Mehr ...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcompare__result.html">compare_result</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">struct to store result of comparison of b-trees  <a href="structcompare__result.html#details">Mehr ...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbtree.html">btree</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">struct which contains the root of b-tree  <a href="structbtree.html#details">Mehr ...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -88,34 +85,49 @@ Typdefinitionen</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funktionen</h2></td></tr>
 <tr class="memitem:a72ad726693113d9aff851503c93bb4ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structbtree.html">btree</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="btree_8h.html#a72ad726693113d9aff851503c93bb4ab">create_btree</a> ()</td></tr>
+<tr class="memdesc:a72ad726693113d9aff851503c93bb4ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates memory for new b-tree.  <a href="#a72ad726693113d9aff851503c93bb4ab">Mehr ...</a><br /></td></tr>
 <tr class="separator:a72ad726693113d9aff851503c93bb4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d41c51b707d17697a931eeed39074dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="btree_8h.html#a1d41c51b707d17697a931eeed39074dc">destroy_btree</a> (<a class="el" href="structbtree.html">btree</a> tree)</td></tr>
+<tr class="memdesc:a1d41c51b707d17697a931eeed39074dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives allocated memory free.  <a href="#a1d41c51b707d17697a931eeed39074dc">Mehr ...</a><br /></td></tr>
 <tr class="separator:a1d41c51b707d17697a931eeed39074dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad660402fc304f699967f810d85c0430d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="btree_8h.html#ad660402fc304f699967f810d85c0430d">get_btree_depth</a> (<a class="el" href="structbtree.html">btree</a> tree)</td></tr>
+<tr class="memdesc:ad660402fc304f699967f810d85c0430d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates depth of b-tree.  <a href="#ad660402fc304f699967f810d85c0430d">Mehr ...</a><br /></td></tr>
 <tr class="separator:ad660402fc304f699967f810d85c0430d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fd2466fad392fceef93f1c7cda58745"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="btree_8h.html#a6fd2466fad392fceef93f1c7cda58745">render_node_to_svg</a> (FILE *fd, <a class="el" href="btree_8h.html#adb97b628c8cb998ccd840435d2d24e64">node_pointer</a> <a class="el" href="structnode.html">node</a>, int x, int y)</td></tr>
+<tr class="memdesc:a6fd2466fad392fceef93f1c7cda58745"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes node svg file.  <a href="#a6fd2466fad392fceef93f1c7cda58745">Mehr ...</a><br /></td></tr>
 <tr class="separator:a6fd2466fad392fceef93f1c7cda58745"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b8d8db0e53fa5c702d4cdc9bd51351e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="btree_8h.html#a3b8d8db0e53fa5c702d4cdc9bd51351e">save_btree_part</a> (FILE *fd, <a class="el" href="btree_8h.html#adb97b628c8cb998ccd840435d2d24e64">node_pointer</a> tree, int x, int y, int prev_stride)</td></tr>
+<tr class="memdesc:a3b8d8db0e53fa5c702d4cdc9bd51351e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves part of a b-tree to file.  <a href="#a3b8d8db0e53fa5c702d4cdc9bd51351e">Mehr ...</a><br /></td></tr>
 <tr class="separator:a3b8d8db0e53fa5c702d4cdc9bd51351e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57cb849538d6378cfc51c0d3156ebea6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="btree_8h.html#a57cb849538d6378cfc51c0d3156ebea6">save_btree</a> (const char *path, <a class="el" href="structbtree.html">btree</a> tree)</td></tr>
+<tr class="memdesc:a57cb849538d6378cfc51c0d3156ebea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves b-tree to svg file.  <a href="#a57cb849538d6378cfc51c0d3156ebea6">Mehr ...</a><br /></td></tr>
 <tr class="separator:a57cb849538d6378cfc51c0d3156ebea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b3b0f9462452d4f89dfd525ed50dfd5"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="btree_8h.html#a1b3b0f9462452d4f89dfd525ed50dfd5">insert</a> (<a class="el" href="structbtree.html">btree</a> tree, <a class="el" href="btree_8h.html#af88f361564b590a09208f756b70a3a07">stdelement</a> e)</td></tr>
+<tr class="memdesc:a1b3b0f9462452d4f89dfd525ed50dfd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts an element to b-tree.  <a href="#a1b3b0f9462452d4f89dfd525ed50dfd5">Mehr ...</a><br /></td></tr>
 <tr class="separator:a1b3b0f9462452d4f89dfd525ed50dfd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2fbb8adf8e2edb05f3cf791744ffa08"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structnode.html">node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="btree_8h.html#ab2fbb8adf8e2edb05f3cf791744ffa08">insert_into_node</a> (<a class="el" href="structbtree.html">btree</a> tree, struct <a class="el" href="structnode.html">node</a> *<a class="el" href="structnode.html">node</a>, <a class="el" href="btree_8h.html#af88f361564b590a09208f756b70a3a07">stdelement</a> e)</td></tr>
+<tr class="memdesc:ab2fbb8adf8e2edb05f3cf791744ffa08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts element to node.  <a href="#ab2fbb8adf8e2edb05f3cf791744ffa08">Mehr ...</a><br /></td></tr>
 <tr class="separator:ab2fbb8adf8e2edb05f3cf791744ffa08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fd1ecfe5dd80a6cfe08a488e2195d9c"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="btree_8h.html#a8fd1ecfe5dd80a6cfe08a488e2195d9c">getIndex</a> (struct <a class="el" href="structnode.html">node</a> *<a class="el" href="structnode.html">node</a>, <a class="el" href="btree_8h.html#af88f361564b590a09208f756b70a3a07">stdelement</a> e)</td></tr>
+<tr class="memdesc:a8fd1ecfe5dd80a6cfe08a488e2195d9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tries to find element in node.  <a href="#a8fd1ecfe5dd80a6cfe08a488e2195d9c">Mehr ...</a><br /></td></tr>
 <tr class="separator:a8fd1ecfe5dd80a6cfe08a488e2195d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3d374b5ed9a7144044b18683d5b5943"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="btree_8h.html#aa3d374b5ed9a7144044b18683d5b5943">moveChildren</a> (struct <a class="el" href="structnode.html">node</a> *<a class="el" href="structnode.html">node</a>, short index)</td></tr>
+<tr class="memdesc:aa3d374b5ed9a7144044b18683d5b5943"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves children to next higher position.  <a href="#aa3d374b5ed9a7144044b18683d5b5943">Mehr ...</a><br /></td></tr>
 <tr class="separator:aa3d374b5ed9a7144044b18683d5b5943"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae60cb619b77731f89401c8e60924cb46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="btree_8h.html#ae60cb619b77731f89401c8e60924cb46">delete</a> (<a class="el" href="structbtree.html">btree</a> tree, <a class="el" href="btree_8h.html#af88f361564b590a09208f756b70a3a07">stdelement</a> e)</td></tr>
+<tr class="memdesc:ae60cb619b77731f89401c8e60924cb46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes element from b-tree.  <a href="#ae60cb619b77731f89401c8e60924cb46">Mehr ...</a><br /></td></tr>
 <tr class="separator:ae60cb619b77731f89401c8e60924cb46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f873686f03c3a473301631115c36a33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="btree_8h.html#a8f873686f03c3a473301631115c36a33">delete_leaf</a> (<a class="el" href="structbtree.html">btree</a> tree, struct <a class="el" href="structnode.html">node</a> *<a class="el" href="structnode.html">node</a>, <a class="el" href="btree_8h.html#af88f361564b590a09208f756b70a3a07">stdelement</a> e)</td></tr>
+<tr class="memdesc:a8f873686f03c3a473301631115c36a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes element and entire leaf from b-tree.  <a href="#a8f873686f03c3a473301631115c36a33">Mehr ...</a><br /></td></tr>
 <tr class="separator:a8f873686f03c3a473301631115c36a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef16a6d12d27d4a5a923e05f8abc0e33"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structnode__element.html">node_element</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="btree_8h.html#aef16a6d12d27d4a5a923e05f8abc0e33">findElement</a> (<a class="el" href="structbtree.html">btree</a> tree, <a class="el" href="btree_8h.html#af88f361564b590a09208f756b70a3a07">stdelement</a> e)</td></tr>
+<tr class="memdesc:aef16a6d12d27d4a5a923e05f8abc0e33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tries to find element in tree.  <a href="#aef16a6d12d27d4a5a923e05f8abc0e33">Mehr ...</a><br /></td></tr>
 <tr class="separator:aef16a6d12d27d4a5a923e05f8abc0e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac702be0db6ca28f375e98b921d151acb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="btree_8h.html#ac702be0db6ca28f375e98b921d151acb">compare</a> (<a class="el" href="structbtree.html">btree</a> tree_a, <a class="el" href="structbtree.html">btree</a> tree_b, struct <a class="el" href="structcompare__result.html">compare_result</a> *result)</td></tr>
+<tr class="memdesc:ac702be0db6ca28f375e98b921d151acb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to compare two b-tree with each other. This function returns true if two B-Trees are equal and false otherwise. Optionally some additional informations can be given about what difference was found and where.  <a href="#ac702be0db6ca28f375e98b921d151acb">Mehr ...</a><br /></td></tr>
 <tr class="separator:ac702be0db6ca28f375e98b921d151acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a809301ef769113f955c8ef5a15117735"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="btree_8h.html#a809301ef769113f955c8ef5a15117735">print_compare</a> (<a class="el" href="structbtree.html">btree</a> tree_a, <a class="el" href="structbtree.html">btree</a> tree_b)</td></tr>
+<tr class="memdesc:a809301ef769113f955c8ef5a15117735"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two trees and output the findings to stdout. Compare two trees and output the findings to stdout. This exists mostly for debug purposes and to give an example on how to use the result struct.  <a href="#a809301ef769113f955c8ef5a15117735">Mehr ...</a><br /></td></tr>
 <tr class="separator:a809301ef769113f955c8ef5a15117735"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
@@ -177,7 +189,8 @@ Funktionen</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method returns true if two B-Trees are equal and false otherwise. Optionally some additional informations can be given about what difference was found and where.</p>
+
+<p>Function to compare two b-tree with each other. This function returns true if two B-Trees are equal and false otherwise. Optionally some additional informations can be given about what difference was found and where. </p>
 <dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
     <tr><td class="paramname">tree_a</td><td>A pointer to the root of a tree </td></tr>
@@ -202,7 +215,9 @@ Funktionen</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Allocates memory for new b-tree </p><dl class="section return"><dt>Rückgabe</dt><dd>new created (empty) b-tree </dd></dl>
+
+<p>Allocates memory for new b-tree. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>new created (empty) b-tree </dd></dl>
 
 </div>
 </div>
@@ -229,7 +244,9 @@ Funktionen</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Removes element from b-tree. </p><dl class="params"><dt>Parameter</dt><dd>
+
+<p>Removes element from b-tree. </p>
+<dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
     <tr><td class="paramname">e</td><td>element which shall be removed </td></tr>
     <tr><td class="paramname">tree</td><td>tree where element shall be removed </td></tr>
@@ -268,7 +285,9 @@ Funktionen</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Removes element and entire leaf from b-tree. </p><dl class="params"><dt>Parameter</dt><dd>
+
+<p>Removes element and entire leaf from b-tree. </p>
+<dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
     <tr><td class="paramname">node</td><td>node which shall be removed </td></tr>
     <tr><td class="paramname">e</td><td>element which shall be removed </td></tr>
@@ -292,7 +311,9 @@ Funktionen</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Gives allocated memory free. </p><dl class="params"><dt>Parameter</dt><dd>
+
+<p>Gives allocated memory free. </p>
+<dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
     <tr><td class="paramname">tree</td><td>tree which shall be destroyed </td></tr>
   </table>
@@ -324,7 +345,9 @@ Funktionen</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Tries to find element in tree. </p><dl class="params"><dt>Parameter</dt><dd>
+
+<p>Tries to find element in tree. </p>
+<dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
     <tr><td class="paramname">e</td><td>element which shall be searched for </td></tr>
     <tr><td class="paramname">tree</td><td>b-tree which shall be searched </td></tr>
@@ -348,7 +371,9 @@ Funktionen</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Calculates depth of b-tree. </p><dl class="params"><dt>Parameter</dt><dd>
+
+<p>Calculates depth of b-tree. </p>
+<dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
     <tr><td class="paramname">tree</td><td>b-tree which depth shall be calculated </td></tr>
   </table>
@@ -381,7 +406,9 @@ Funktionen</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Tries to find element in node. </p><dl class="params"><dt>Parameter</dt><dd>
+
+<p>Tries to find element in node. </p>
+<dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
     <tr><td class="paramname">node</td><td>node which shall be searched for element </td></tr>
     <tr><td class="paramname">e</td><td>element which shall be searched for </td></tr>
@@ -415,7 +442,9 @@ Funktionen</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Inserts an element to b-tree </p><dl class="params"><dt>Parameter</dt><dd>
+
+<p>Inserts an element to b-tree. </p>
+<dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
     <tr><td class="paramname">e</td><td>element which shall be inserted </td></tr>
     <tr><td class="paramname">tree</td><td>b-tree where element shall be inserted </td></tr>
@@ -454,7 +483,9 @@ Funktionen</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Inserts element to node. </p><dl class="params"><dt>Parameter</dt><dd>
+
+<p>Inserts element to node. </p>
+<dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
     <tr><td class="paramname">node</td><td>node where element shall be stored </td></tr>
     <tr><td class="paramname">e</td><td>element which shall be stored </td></tr>
@@ -491,7 +522,9 @@ Funktionen</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Moves children to next higher position. </p><dl class="params"><dt>Parameter</dt><dd>
+
+<p>Moves children to next higher position. </p>
+<dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
     <tr><td class="paramname">node</td><td>node which children shall be moved </td></tr>
     <tr><td class="paramname">index</td><td>index of child where shall be started </td></tr>
@@ -524,7 +557,8 @@ Funktionen</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Compare two trees and output the findings to stdout. This exists mostly for debug purposes and to give an example on how to use the result struct.</p>
+
+<p>Compare two trees and output the findings to stdout. Compare two trees and output the findings to stdout. This exists mostly for debug purposes and to give an example on how to use the result struct. </p>
 <dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
     <tr><td class="paramname">tree_a</td><td>A pointer to the root of a tree </td></tr>
@@ -570,16 +604,18 @@ Funktionen</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Writes node svg file. </p>
 <dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fd</td><td></td></tr>
-    <tr><td class="paramname">node</td><td></td></tr>
-    <tr><td class="paramname">x</td><td></td></tr>
-    <tr><td class="paramname">y</td><td></td></tr>
+    <tr><td class="paramname">fd</td><td>file where node shall be stored </td></tr>
+    <tr><td class="paramname">node</td><td>node which shall be stored </td></tr>
+    <tr><td class="paramname">x</td><td>x position of node in graph </td></tr>
+    <tr><td class="paramname">y</td><td>y position of node in graph </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Rückgabe</dt><dd></dd></dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>EXIT_SUCCESS if everything went right else EXIT_FAILURE </dd></dl>
 
 </div>
 </div>
@@ -606,7 +642,9 @@ Funktionen</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Saves b-tree to svg file. </p><dl class="params"><dt>Parameter</dt><dd>
+
+<p>Saves b-tree to svg file. </p>
+<dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>relative path and name of svg file </td></tr>
     <tr><td class="paramname">tree</td><td>b-tree which shall be stored </td></tr>
@@ -658,17 +696,19 @@ Funktionen</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Saves part of a b-tree to file. </p>
 <dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fd</td><td></td></tr>
-    <tr><td class="paramname">tree</td><td></td></tr>
-    <tr><td class="paramname">x</td><td></td></tr>
-    <tr><td class="paramname">y</td><td></td></tr>
-    <tr><td class="paramname">prev_stride</td><td></td></tr>
+    <tr><td class="paramname">fd</td><td>file where part of b-tree shall be stored </td></tr>
+    <tr><td class="paramname">tree</td><td>node from where part of b-tree shall be written </td></tr>
+    <tr><td class="paramname">x</td><td>x position of node </td></tr>
+    <tr><td class="paramname">y</td><td>y position of node </td></tr>
+    <tr><td class="paramname">prev_stride</td><td>previous stride </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Rückgabe</dt><dd></dd></dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>EXIT_SUCCESS if everything went right else EXIT_FAILURE </dd></dl>
 
 </div>
 </div>
